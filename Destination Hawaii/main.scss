@@ -82,6 +82,10 @@ a {
             @media (max-width: $breakpoint) {
                 font-size: 3.5rem;
             }
+
+            @media (max-width: $breakpoint/2) {
+                font-size: 2.5rem;
+            }
         }
 
         & > .more-info {
@@ -93,6 +97,10 @@ a {
 
             @media (max-width: $breakpoint) {
                 font-size: 1.5rem;
+            }
+
+            @media (max-width: $breakpoint/2) {
+                font-size: 1rem;
             }
         }
     }
@@ -119,7 +127,7 @@ a {
         &:nth-child(even) {
             @media (max-width: $breakpoint) {
                 flex-direction: column-reverse;
-                padding-top: 150px;
+                padding-top: 350px;
             }
             grid-template-columns: 70% 30%;
         }
@@ -207,6 +215,10 @@ footer {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     opacity: 0.5;
-    margin-top: 50px;
+    padding-top: 150px;
     margin-bottom: 20px;
+
+    .meLink {
+        color: black;
+    }
 }
