@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     user-select: none;
+    min-width: 340px;
 }
 
 a {
@@ -114,6 +115,11 @@ a {
         @media (max-width: $breakpoint) {
             display: flex;
             flex-direction: column;
+            padding-top: 20vh;
+
+            &:nth-child(1) {
+                margin-top: -10vh;
+            }
         }
         
         @media (max-width: $breakpoint/1.5) {
@@ -126,8 +132,13 @@ a {
         
         &:nth-child(even) {
             @media (max-width: $breakpoint) {
-                flex-direction: column-reverse;
-                padding-top: 350px;
+                & > .image {
+                    order: 1;
+                }
+
+                & > .description {
+                    order: 2;
+                }
             }
             grid-template-columns: 70% 30%;
         }
