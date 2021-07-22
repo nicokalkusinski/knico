@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+
+@font-face {
+    font-family: 'Facon Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Facon Bold Italic'), url('Facon.woff') format('woff');
+}
+
+$breakpoint: 1100px;
+
+$gold: #ebe246;
+$green: #41ee75;
+$dark: #0b0d12;
+
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: $dark;
+}
+
+a {
+    color: white;
+    transition: 0.3s ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+            color: $green;
+        }
+}
+
+.credits {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: calc(calc(100% - 200px)/2);
+    color: white;
+    font-size: 0.7rem;
+    font-family: 'Open sans', sans-serif;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.big {
+    font-size: 2em;
+}
+
+.nl {
+    font-family: 'Facon Bold Italic';
+    color: $green;
+    font-size: 2.5em;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        text-shadow: 0px 0px 10px $green;
+    }
+}
+
+#containter {
+    color: white;
+    font-family: "Poppins";
+
+    font-size: 1.6rem;
+
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    .content {
+        position: relative;
+
+        scroll-snap-align: start;
+        height: 100vh;
+
+        &::before {
+            position: absolute;
+            content: "";
+            z-index: -2;
+
+            width: 100%;
+            height: 100%;
+
+            background-size: cover;
+            background-position: center;
+
+            filter: grayscale(100%);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(0deg, $dark 5%, rgba(255,255,255,0) 60%);
+        }
+    }
+}
+
+.content:nth-child(1)::before {
+    background-image: url(img/banner.jpg);
+}
+
+nav {
+    position: absolute;
+    right: 0;
+    top: 2%;
+
+    width: 40%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    text-transform: uppercase;
+
+    div {
+        text-align: center;
+        transition: 0.2s ease-in-out;
+        filter: blur(1px);
+
+        &:hover {
+            color: $green;
+            cursor: pointer;
+            filter: blur(0px);
+        }
+    }
+}
+
+header {
+    width: 100%;
+    
+    position: absolute;
+    bottom: 5%;
+    
+    font-size: 2.5rem;
+    text-align: center;
+
+    div {
+        margin: 1%;
+    }
+
+    i {
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            transform: translateY(-50%);
+        }
+    }
+}
+
+#coaches {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    & > div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .coach-bgc {
+        position: relative;
+
+        background-image: url(img/coach-img.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-90deg, rgba(11,13,18,1) 5%, rgba(11,13,18,0.80) 47%, rgba(11,13,18,0) 100%);
+        }
+    }
+
+    .coach-content {
+        text-align: center;
+        height: 80%;
+        margin: auto;
+    
+        .coach-boxes {
+            height: 70%;
+
+            margin-top: 10%;
+
+            place-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+
+            .coach-box {
+                width: 70%;
+                height: 100%;
+
+                position: relative;
+                
+                border: 1px solid $green;
+
+                .coach-image {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    filter: grayscale(100%);
+
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    transition: 0.3s ease-in-out;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(0deg, $dark 5%, rgba(255,255,255,0) 60%);
+                    }
+                }
+
+                .coach-name {
+                    position: absolute;
+                    bottom: 10%;
+                    width: 100%;
+                    text-align: center;
+
+                    opacity: 0;
+
+                    transition: 0.3s ease-in-out;
+                }
+
+                .coach-desc {
+                    position: absolute;
+                    bottom: 0%;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1rem;
+
+                    opacity: 0;
+
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:nth-child(1) .coach-image {
+                    background-image: url(img/coach1.jpg);
+                }
+                &:nth-child(2) .coach-image {
+                    background-image: url(img/coach2.jpg);
+                }
+
+                &:hover {
+                    .coach-image {
+                        filter: grayscale(0%);
+                    }
+
+                    .coach-name {
+                        transform: translateY(-50%);
+                        opacity: 1;
+                    }
+
+                    .coach-desc {
+                        transform: translateY(-50%);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#nutritionists {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    & > div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nut-bgc {
+        position: relative;
+
+        background-image: url(img/nutrition-img.jpg);
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        filter: grayscale(100%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-90deg, rgba(11,13,18,1) 5%, rgba(11,13,18,0.80) 47%, rgba(11,13,18,0) 100%);
+        }
+    }
+
+    .nut-content {
+        text-align: center;
+        height: 80%;
+        margin: auto;
+    
+        .nut-boxes {
+            height: 70%;
+
+            margin-top: 10%;
+
+            place-items: center;
+            display: grid;
+            grid-template-columns: repeat(3, calc(100%/3));
+
+            .nut-box {
+                width: 90%;
+                height: 100%;
+
+                position: relative;
+                
+                border: 1px solid $green;
+
+                .nut-image {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    filter: grayscale(100%);
+
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    transition: 0.3s ease-in-out;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(0deg, $dark 5%, rgba(255,255,255,0) 60%);
+                    }
+                }
+
+                .nut-name {
+                    position: absolute;
+                    bottom: 10%;
+                    width: 100%;
+                    text-align: center;
+
+                    opacity: 0;
+
+                    transition: 0.3s ease-in-out;
+                }
+
+                .nut-desc {
+                    position: absolute;
+                    bottom: 0%;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1rem;
+
+                    opacity: 0;
+
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:nth-child(1) .nut-image {
+                    background-image: url(img/nut1.jpg);
+                }
+                &:nth-child(2) .nut-image {
+                    background-image: url(img/nut2.jpg);
+                }
+                &:nth-child(3) .nut-image {
+                    background-image: url(img/nut3.jpg);
+                }
+
+                &:hover {
+                    .nut-image {
+                        filter: grayscale(0%);
+                    }
+
+                    .nut-name {
+                        transform: translateY(-50%);
+                        opacity: 1;
+                    }
+
+                    .nut-desc {
+                        transform: translateY(-50%);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#plans {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 5%;
+
+    text-align: center;
+
+    
+    .top {
+        margin-bottom: 5%;
+    }
+    
+    .plans_grid {
+        width: 90%;
+        
+        display: grid;
+        grid-template-columns: repeat(3, calc(100%/3));
+        
+        margin: auto;
+        
+        .plan {
+            margin: auto;
+            width: 80%;  
+            border: 1px solid $green;
+            padding: 5%;
+            position: relative;
+            background-color: $dark;
+
+            .nl {
+                font-size: 3rem;
+            }
+
+            font-size: 1rem;
+
+            hr {
+                color: $green;
+            }
+
+            div {
+                margin-bottom: 5%;
+                margin-top: 5%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-color: $green;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:hover {
+                &::before {
+                    transform: rotate(3deg);
+                }
+            }
+
+            .btn {
+                margin: auto;
+                font-size: 1.5rem;
+                width: 40%;
+                line-height: 50px;
+                height: 50px;
+                border: 1px solid $green;
+
+                transition: 0.3s ease-in-out;
+                
+                &:hover {
+                    background-color: $green;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
