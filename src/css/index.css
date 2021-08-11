@@ -500,15 +500,15 @@ header #header-content .btn {
 }
 
 #portfolio #portfolio-content #examples .example-item:nth-child(1) {
-  background-image: url("../../projects/DMance/img/emmayti.jpg");
+  background-image: url("../images/projects/dmance.jpg");
 }
 
 #portfolio #portfolio-content #examples .example-item:nth-child(2) {
-  background-image: url("../../projects/NextLevel/img/banner.jpg");
+  background-image: url("../images/projects/caffi.jpg");
 }
 
 #portfolio #portfolio-content #examples .example-item:nth-child(3) {
-  background-image: url("../../projects/Vintage/img/car.jpg");
+  background-image: url("../images/projects/vinge.jpg");
 }
 
 #portfolio #portfolio-content #examples .example-item::after {

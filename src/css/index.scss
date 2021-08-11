@@ -423,9 +423,9 @@ header {
                     font-size: 2.4em;
                 }
 
-                &:nth-child(1) {background-image: url("../../projects/DMance/img/emmayti.jpg");}
-                &:nth-child(2) {background-image: url("../../projects/NextLevel/img/banner.jpg");}
-                &:nth-child(3) {background-image: url("../../projects/Vintage/img/car.jpg");}
+                &:nth-child(1) {background-image: url("../images/projects/dmance.jpg");}
+                &:nth-child(2) {background-image: url("../images/projects/caffi.jpg");}
+                &:nth-child(3) {background-image: url("../images/projects/vinge.jpg");}
 
                 &::after {
                     content: "";
