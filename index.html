@@ -4,65 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knico Web Portoflio</title>
+    <title>Knico</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/media.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cedd12acf6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="main">
-        <div id="greetings">
-            <div>I'm Knico.</div>
-            <div>I will develop your website.</div>
+    <header id="home">
+        <div id="header-content">
+            <div class="headline">knico</div>
+            <div class="text-content">Student & Web Designer</div>
+            <div class="goal">My goal is to make websites that<br>you wouldn't turn your eyes from.</div>
+            <a href="#about"><div class="btn">Read more</div></a>
         </div>
-        <div id="containter">
-            <div class="item">
-                <div class="image"></div>
-                <div class="info">
-                    <div>Destination Hawaii</div>
-                    <div>Responsive home page with a few additions.</div>
-                </div>
+    </header>
+    <section id="about">
+        <nav id="nav_bar">
+            <div id="links">
+                <a href="#home"><div class="nav-item">home</div></a>
+                <a href="#about"><div class="nav-item">about me</div></a>
+                <a href="#portfolio"><div class="nav-item">portfolio</div></a>
+                <a href="#contact"><div class="nav-item">contact</div></a>
             </div>
-            <div class="item">
-                <div class="image"></div>
-                <div class="info">
-                    <div>BookByBook</div>
-                    <div>Responsive landpage for your business.</div>
-                </div>
+        </nav>
+        <div id="about-content">
+            <div id="about-me">
+                <div class="headline">about me</div>
+                <div class="text-content">Here is why you want to hire me.</div>
             </div>
-            <div class="item">
-                <div class="image"></div>
-                <div class="info">
-                    <div>DMance</div>
-                    <div>Responsive event landpage.</div>
+            <div id="perks">
+                <div class="perk-item">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="headline">responsive</div>
+                    <div class="text-content"><span><span class="bold">61%</span> of all websites are viewed on mobile. You will love seeing your site either on mobile or desktop.</span></div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="image"></div>
-                <div class="info">
-                    <div>Next Level</div>
-                    <div>Responsive full page website.</div>
+                <div class="perk-item">
+                    <div class="icon"><i class="fas fa-asterisk"></i></div>
+                    <div class="headline">details</div>
+                    <div class="text-content"><span>They are the <span class="bold">core</span> of the attention. I got your back in that matter.</span></div>
+                </div>
+                <div class="perk-item">
+                    <div class="icon"><i class="fas fa-medal"></i></div>
+                    <div class="headline">experience</div>
+                    <div class="text-content"><span>I'm in webdev since <span class="bold">2016</span>. You can check some examples below and don't forget to try them on mobile!</span></div>
+                </div>
+                <div class="perk-item">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <div class="headline">approach</div>
+                    <div class="text-content"><span>Every site needs <span class="bold">individual approach.</span> Say <span class="bold">no</span> to boring templates.</div>
+                </div>
+                <div class="perk-item">
+                    <div class="icon"><i class="far fa-copyright"></i></div>
+                    <div class="headline">copyrights</div>
+                    <div class="text-content"><span>I'm not the outlaw. You don't need to worry about <span class="bold">copyrights</span> with me.</span></div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="portfolio">
+        <div id="portfolio-content">
+            <div id="portfolio-text">
+                <div class="headline">portfolio</div>
+                <div class="text-content">Don't forget to try these on mobile.</div>
+            </div>
+            <div id="examples">
+                <div class="example-item">
+                    <div class="hover_over">hover over</div>
+                    <div class="item-content">
+                        <div class="headline">dmance</div>
+                        <div class="text-content">Fancy looking site to present your event.</div>
+                    </div>
+                </div>
+                <div class="example-item">
+                    <div class="hover_over">hover over</div>
+                    <div class="item-content">
+                        <div class="headline">next level</div>
+                        <div class="text-content">Stylish coffee cafe site to present your business.</div>
+                    </div>
+                </div>
+                <div class="example-item">
+                    <div class="hover_over">hover over</div>
+                    <div class="item-content">
+                        <div class="headline">vintage</div>
+                        <div class="text-content">Theme site for engaging the viewer with this style.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section_break">
+        <div id="section_break-content">
+            <div class="goal">I always deliver the highest quality content.</div>
+            <div class="goal">Make yourself a favor and let your website be unique.</div>
+        </div>
+    </section>
+    <section id="contact">
+        <div id="contact-content">
+            <div id="contact-text">
+                <div class="headline">contact</div>
+                <div class="text-content">I don't bite. Get in touch with me.</div>
+            </div>
+            <div id="form">
+                <form action="https://formspree.io/f/mnqlgvjy" method="POST">
+                    <div class="top">
+                        <div class="form_headline">name</div>
+                        <div class="form_headline">email</div>
+                        <div><input type="text" name="name" class="name"></div>
+                        <div><input type="email" name="_replyto" class="email"></div>
+                    </div>
+                    <div class="bottom">
+                        <div class="form_headline">message</div>
+                        <textarea name="_message" class="message" cols="30" rows="7"></textarea>
+                    </div>
+                    <input type="submit" value="Send" class="btn">
+                </form>
+                <div class="info">
+                    <div class="info-line"></div>
+                    <div class="info-line">
+                        <div><i class="fas fa-user"></i> <b>Nico Kalkusinski</b></div>
+                        <div>Knico</div>
+                    </div>
+                    <div class="info-line">
+                        <div>United Kingdom</div>
+                        <div>Poland</div>
+                    </div>
+                    <div class="info-line">
+                        <div>E-mail: <b>nicokalkusinski@gmail.com</b></div>
+                    </div>
+                    <div class="info-line">
+                        <div class="icon"><i class="fab fa-github"></i></div>
+                        <div class="icon"><b>fi</b></div>
+                        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        document.getElementsByClassName("item")[0].addEventListener("click", () => {
-            window.location.href = "Destination Hawaii/index.html";
-        });
-        document.getElementsByClassName("item")[1].addEventListener("click", () => {
-            window.location.href = "BookByBook/index.html";
-        });
-        document.getElementsByClassName("item")[2].addEventListener("click", () => {
-            window.location.href = "DMance/index.html"
-        });
-        document.getElementsByClassName("item")[3].addEventListener("click", () => {
-            window.location.href = "NextLevel/index.html"
-        });
-    </script>
+    <script src="src/js/fixedNavBar.js"></script>
 </body>
 </html>

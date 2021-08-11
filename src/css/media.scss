@@ -1,0 +1,253 @@
+$bp1920: 1920px;
+$bp1536: 1536px;
+$bp1366: 1366px;
+$bp600: 600px;
+$bp400: 400px;
+
+$dark_color: #262d37;
+
+.headline {
+    @media screen and (max-width: $bp1366) {
+        font-size: 3em;
+    }
+    @media screen and (max-width: $bp600) {
+        font-size: 2.6em;
+    }
+}
+
+header {
+    #header-content {
+        @media screen and (max-width: $bp1366) {
+            width: 50%;
+        }
+        @media screen and (max-width: $bp600) {
+            left: 0%;
+            width: 100%;
+        }
+
+        .headline {
+            @media screen and (max-width: $bp1366) {
+                font-size: 7em;
+            }
+            @media screen and (max-width: $bp600) {
+                font-size: 6em;
+            }
+        }
+
+        .text-content {
+            @media screen and (max-width: $bp1366) {
+                &::after, &::before {
+                    display: none;
+                }
+            }
+        }
+
+        .goal {
+            @media screen and (max-width: $bp1366) {
+                margin-top: 15%;
+                font-size: 1.4em;
+            }
+        }
+
+        .btn {
+            @media screen and (max-width: $bp1366) {
+                margin-top: 15%;
+                width: 16vw;
+            }
+            @media screen and (max-width: calc(850px)) {
+                width: 30vw;
+            }
+            @media screen and (max-width: $bp600) {
+                width: 40vw;
+            }
+        }
+    }
+}
+
+#about {
+    @media screen and (max-width: $bp1366) {
+        // font-size: 3em;
+    }
+    @media screen and (max-width: $bp600) {
+        height: fit-content;
+    }
+
+    nav {
+        @media screen and (max-width: $bp600) {
+            display: none;
+        }
+
+        #links {
+            @media screen and (max-width: $bp1366) {
+                width: 100%;
+            }
+        }
+    }
+
+    #about-content {
+        @media screen and (max-width: $bp1366) {
+            // font-size: 3em;
+        }
+        @media screen and (max-width: $bp600) {
+            position: relative;
+            height: 80%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        #about-me {
+            @media screen and (max-width: $bp600) {
+                height: 10%;
+            }
+        }
+
+        #perks {
+            @media screen and (max-width: $bp1366) {
+                // font-size: 3em;
+            }
+            @media screen and (max-width: $bp600) {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+
+            .perk-item {
+                @media screen and (max-width: $bp1366) {
+                    // font-size: 3em;
+                }
+                @media screen and (max-width: $bp600) {
+                    width: 100%;
+                    opacity: 1;
+
+                    .icon {
+                        margin: 5%;
+                        font-size: 2em;
+                    }
+
+                    .headline {
+                        font-size: 1.4em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#portfolio {
+    @media screen and (max-width: $bp1366) {
+        // font-size: 3em;
+    }
+    @media screen and (max-width: $bp600) {
+        height: fit-content;
+    }
+
+    #portfolio-content {
+        @media screen and (max-width: $bp1366) {
+            // font-size: 3em;
+        }
+        @media screen and (max-width: $bp600) {
+            position: relative;
+            height: 80%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        #portfolio-text {
+            @media screen and (max-width: $bp600) {
+                height: 10%;
+            }
+        }
+
+        #examples {
+            @media screen and (max-width: $bp1366) {
+                // font-size: 3em;
+            }
+            @media screen and (max-width: $bp600) {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+
+            .example-item {
+                @media screen and (max-width: $bp1366) {
+                    // font-size: 3em;
+                }
+                @media screen and (max-width: $bp600) {
+                    width: 100%;
+                    opacity: 1;
+                    
+                    .item-content {
+                        opacity: 1;
+
+                        height: 100%;
+                        width: 100%;
+
+                        padding: 5%;
+                        box-sizing: border-box;
+
+                        .headline {
+                            position: absolute;
+                            top: 5%;
+                            font-size: 1.6em;
+                            display: none;
+                        }
+
+                        .text-content {
+                            position: absolute;
+                            bottom: 5%;
+                            font-size: 1.1em;
+                        }
+                    }
+
+                    .hover_over {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section_break-content {
+    @media screen and (max-width: $bp1366) {
+        // font-size: 3em;
+    }
+    @media screen and (max-width: $bp600) {
+        .goal {
+            margin: 5% !important;
+            font-size: 1.2em;
+        }
+    }
+}
+
+#contact {
+    @media screen and (max-width: $bp1366) {
+        // font-size: 3em;
+    }
+    @media screen and (max-width: $bp600) {
+        #contact-content {
+            position: relative;
+            height: 80%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+
+            #portfolio-text {
+                height: 10%;
+            }
+
+            #form {
+                width: 100%;
+        
+                form {
+                    width: 100%;
+        
+                    .btn {
+                        width: 100%;
+                        border: 2px solid $dark_color;
+                        position: relative;
+                        right: 0;
+                        margin-bottom: 10%;
+                    }
+                }
+            }
+        }
+    }
+}

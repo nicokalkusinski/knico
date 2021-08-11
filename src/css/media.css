@@ -1,0 +1,224 @@
+@media screen and (max-width: 1366px) {
+  .headline {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headline {
+    font-size: 2.6em;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  header #header-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header #header-content {
+    left: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  header #header-content .headline {
+    font-size: 7em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header #header-content .headline {
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  header #header-content .text-content::after, header #header-content .text-content::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  header #header-content .goal {
+    margin-top: 15%;
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  header #header-content .btn {
+    margin-top: 15%;
+    width: 16vw;
+  }
+}
+
+@media screen and (max-width: calc(850px)) {
+  header #header-content .btn {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header #header-content .btn {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  #about nav #links {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about #about-content {
+    position: relative;
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about #about-content #about-me {
+    height: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about #about-content #perks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about #about-content #perks .perk-item {
+    width: 100%;
+    opacity: 1;
+  }
+  #about #about-content #perks .perk-item .icon {
+    margin: 5%;
+    font-size: 2em;
+  }
+  #about #about-content #perks .perk-item .headline {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio #portfolio-content {
+    position: relative;
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio #portfolio-content #portfolio-text {
+    height: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio #portfolio-content #examples {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio #portfolio-content #examples .example-item {
+    width: 100%;
+    opacity: 1;
+  }
+  #portfolio #portfolio-content #examples .example-item .item-content {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #portfolio #portfolio-content #examples .example-item .item-content .headline {
+    position: absolute;
+    top: 5%;
+    font-size: 1.6em;
+    display: none;
+  }
+  #portfolio #portfolio-content #examples .example-item .item-content .text-content {
+    position: absolute;
+    bottom: 5%;
+    font-size: 1.1em;
+  }
+  #portfolio #portfolio-content #examples .example-item .hover_over {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #section_break-content .goal {
+    margin: 5% !important;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact #contact-content {
+    position: relative;
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  #contact #contact-content #portfolio-text {
+    height: 10%;
+  }
+  #contact #contact-content #form {
+    width: 100%;
+  }
+  #contact #contact-content #form form {
+    width: 100%;
+  }
+  #contact #contact-content #form form .btn {
+    width: 100%;
+    border: 2px solid #262d37;
+    position: relative;
+    right: 0;
+    margin-bottom: 10%;
+  }
+}
+/*# sourceMappingURL=media.css.map */

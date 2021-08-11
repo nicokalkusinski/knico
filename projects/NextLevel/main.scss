@@ -13,6 +13,19 @@ $gold: #ebe246;
 $green: #41ee75;
 $dark: #0b0d12;
 
+.credits {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    left: calc(calc(100% - 200px)/2);
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Open sans', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -28,20 +41,6 @@ a {
         &:hover {
             color: $green;
         }
-}
-
-.credits {
-    width: 200px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: calc(calc(100% - 200px)/2);
-    color: white;
-    font-size: 0.7rem;
-    font-family: 'Open sans', sans-serif;
-    z-index: 2;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
 }
 
 .big {

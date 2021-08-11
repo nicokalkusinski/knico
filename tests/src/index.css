@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@font-face {
+  font-family: 'Lovelo';
+  src: url("./src/Lovelo Black.woff2") format("woff2");
+}
+
+@-webkit-keyframes hoverAnim {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@keyframes hoverAnim {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  scrollbar-width: none;
+  overflow: hidden;
+  /* Hide scrollbars */
+}
+
+.background_circle {
+  position: absolute;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f23252;
+  opacity: 0.3;
+}
+
+#examples {
+  border: 1px solid black;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+
+#examples .side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#examples .box {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 15%;
+  min-height: 150px;
+  margin-bottom: 1%;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+#examples .box:hover {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#examples .box:hover .mask {
+  -webkit-transform: translateX(calc(70% + 1px));
+          transform: translateX(calc(70% + 1px));
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+#examples .box:hover .mask .img {
+  opacity: 1;
+}
+
+#examples .box:hover .mask .img::after {
+  left: -10px;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+}
+
+#examples .box:hover .hoverIcon {
+  opacity: 0;
+}
+
+#examples .box .mask {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+#examples .box .mask .img {
+  height: 100%;
+  width: 30%;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  background-position: center;
+  background-size: cover;
+}
+
+#examples .box .mask .img::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+#examples .box:nth-child(1) .img {
+  background-image: url("../Destination Hawaii/img/island.jpg");
+}
+
+#examples .box:nth-child(2) .img {
+  background-image: url("../BookByBook/img/main.jpg");
+}
+
+#examples .box:nth-child(3) .img {
+  background-image: url("../DMance/img/emmayti.jpg");
+}
+
+#examples .box:nth-child(4) .img {
+  background-image: url("../NextLevel/img/banner.jpg");
+}
+
+#examples .box:nth-child(5) .img {
+  background-image: url("../Vintage/img/baner.jpg");
+}
+
+#examples .box .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 70%;
+  height: 100%;
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: black;
+  text-align: center;
+}
+
+#examples .box .text .headline {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  font-size: 2.6em;
+}
+
+#examples .box .text .content {
+  font-size: 1.2em;
+}
+
+#examples .box .hoverIcon {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  right: 15px;
+  opacity: 0.3;
+  font-size: 1.2rem;
+  -webkit-animation: 3s hoverAnim infinite;
+          animation: 3s hoverAnim infinite;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+/*# sourceMappingURL=index.css.map */

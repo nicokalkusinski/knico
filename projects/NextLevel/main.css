@@ -6,6 +6,20 @@
   src: local("Facon Bold Italic"), url("Facon.woff") format("woff");
 }
 
+.credits {
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  left: calc(calc(100% - 200px)/2);
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'Open sans', sans-serif;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -25,21 +39,6 @@ a {
 
 a:hover {
   color: #41ee75;
-}
-
-.credits {
-  width: 200px;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: calc(calc(100% - 200px)/2);
-  color: white;
-  font-size: 0.7rem;
-  font-family: 'Open sans', sans-serif;
-  z-index: 2;
-  opacity: 0;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
 .big {
