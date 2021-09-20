@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
+#click_page {
+  position: absolute;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../imgs/bg/bg_main.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+#click_page::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+
+#circle {
+  position: absolute;
+  z-index: 2;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#hover-area {
+  position: absolute;
+  z-index: 4;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  opacity: 0.2;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#hover-area:hover + #circle {
+  width: 32vw;
+  height: 32vw;
+}
+
+#hover-area:hover + #circle #content {
+  left: calc(-50vw + $size);
+  top: calc(-50vh + $size);
+}
+
+#hover-area:hover {
+  cursor: pointer;
+}
+
+#content {
+  position: absolute;
+  left: calc(-50vw + calc($size / 2));
+  top: calc(-50vh + calc($size / 2));
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  background-image: url("../../imgs/bg/bg_main.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+/*# sourceMappingURL=click_page.css.map */

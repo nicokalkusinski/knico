@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
+
+$size: 20vw;
+$size2: 32vw;
+
+@mixin image {
+    background-image: url("../../imgs/bg/bg_main.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#click_page {
+    position: absolute;
+    z-index: 1;
+
+    
+    display: grid;
+    place-items: center;
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    @include image;
+
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.3s;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        backdrop-filter: blur(30px);
+    }
+}
+
+#circle {
+    position: absolute;
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    width: $size;
+    height: $size;
+
+    border-radius: 50%;
+
+    // border: 1px solid #303030;
+
+    overflow: hidden;
+
+    transition: 0.3s ease-in-out;
+}
+
+#hover-area {
+    position: absolute;
+    z-index: 4;
+
+    display: grid;
+    place-items: center;
+
+    width: $size;
+    height: $size;
+
+    // border: 1px solid white;
+    border-radius: 50%;
+
+    opacity: 0.2;
+
+    transition: 0.3s ease-in-out;
+
+    &:hover + #circle {
+        width: $size2;
+        height: $size2;
+
+        #content {
+            left: calc(-50vw + $size);
+            top: calc(-50vh + $size);
+        }
+    }
+
+    &:hover {
+        // color: transparent;
+        cursor: pointer;
+    }
+}
+
+#content {
+    position: absolute;
+    left: calc(-50vw + calc($size / 2));
+    top: calc(-50vh + calc($size / 2));
+    z-index: 3;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #fff;
+
+    @include image;
+
+    transition: 0.3s ease-in-out;
+}
