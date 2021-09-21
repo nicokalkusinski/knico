@@ -5,7 +5,6 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
-  display: none;
   width: 100vw;
   height: 100vh;
   background-image: url("../../imgs/bg/bg_main.jpg");
