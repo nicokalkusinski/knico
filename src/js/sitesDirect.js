@@ -5,3 +5,4 @@ sites[0].addEventListener("click", () => {
 sites[2].addEventListener("click", () => {
     window.open("https://raitrow.github.io/knico/projects/Keonti/web/index.html");
 })
+console.log(sites);

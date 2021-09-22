@@ -15,5 +15,5 @@ function changeCss () {
         navbar.style.height = "10vh";
     }
 
-    console.log(this.scrollY, height);
+    // console.log(this.scrollY, height);
 }
