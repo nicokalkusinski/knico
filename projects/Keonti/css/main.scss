@@ -29,6 +29,8 @@ $dark: #C0A59A;
 
     font-size: 1.125rem;
     text-align: justify;
+    line-height: 1.8rem;
+    // letter-spacing: 1px;
 }
 
 .image {
@@ -51,7 +53,7 @@ $dark: #C0A59A;
 
 .info {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 23px);
     left: -65%;
 
     width: 100%;
@@ -61,6 +63,9 @@ $dark: #C0A59A;
     text-align: center;
 
     transform: rotate(-90deg);
+
+    // border: 1px solid red;
+    // box-sizing: border-box;
 
     font-size: 1.125rem;
 
