@@ -13,6 +13,8 @@ document.getElementById("hover-area").addEventListener("click", () => {
 
     document.getElementById("click_page").style.opacity = "0";
 
+    document.body.style.overflow = "auto";
+
     setTimeout(() => {
         document.getElementById("click_page").style.display = "none";
     }, 600);

@@ -67,6 +67,12 @@
   }
 }
 
+@media screen and (max-width: 1366px) {
+  #about {
+    height: 140vh;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #about {
     height: -webkit-fit-content;
@@ -113,6 +119,19 @@
   }
 }
 
+@media screen and (max-width: 1366px) {
+  #about #about-content #perks .perk-item {
+    min-height: 260px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 42%;
+  }
+  #about #about-content #perks .perk-item > * {
+    margin: 1%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #about #about-content #perks .perk-item {
     width: 100%;
@@ -124,6 +143,29 @@
   }
   #about #about-content #perks .perk-item .headline {
     font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #skills {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #skills #skills-content {
+    position: relative;
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #skills #skills-content #skills-text {
+    height: 10%;
   }
 }
 
