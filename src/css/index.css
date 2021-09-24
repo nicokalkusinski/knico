@@ -114,6 +114,9 @@ body::-webkit-scrollbar-thumb {
 section {
   position: relative;
   width: 100%;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -461,6 +464,11 @@ header #header-content .btn {
 }
 
 #skills #list .skill {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   background-color: white;
   padding: 0.4rem;
   font-size: 1.125rem;
@@ -478,6 +486,18 @@ header #header-content .btn {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   opacity: 1;
+}
+
+#skills #list .skill i {
+  font-size: 1.4rem;
+}
+
+#skills #list .skill i:nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+#skills #list .skill i:nth-child(2) {
+  margin-left: 0.5rem;
 }
 
 #portfolio {
