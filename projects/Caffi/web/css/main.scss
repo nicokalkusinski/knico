@@ -15,11 +15,16 @@ body {
     margin: 0;
 
     font-family: $font_2;
-    font-weight: 400;
+    font-weight: 300;
 
     user-select: none;
 
     color: $color_3;
+}
+
+p {
+    padding: 0;
+    margin: 0;
 }
 
 .selected {
@@ -28,7 +33,7 @@ body {
 }
 
 .text {
-    text-shadow: 0px 4px 4px $color_2;
+    text-shadow: 0px 4px 4px rgba(43, 43, 43, 0.5);
 }
 
 .font {
@@ -52,6 +57,8 @@ nav {
     height: 10vh;
 
     background-color: #2B2B2B;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 
     #logo {
         display: flex;
@@ -78,7 +85,7 @@ nav {
 
         height: 100%;
 
-        font-size: 1.5rem;
+        font-size: 1.125rem;
         
 
         color: $color_3;
@@ -87,8 +94,11 @@ nav {
             transition: 0.2s ease-in-out;
             cursor: pointer;
             letter-spacing: 1px;
+            opacity: 0.3;
             
             &:hover {
+                opacity: 1;
+                text-shadow: 0px 0px 4px $color_1;
                 color: $color_1;
             }
         }
@@ -182,4 +192,237 @@ nav {
 
         backdrop-filter: blur(10px);
     }
+}
+
+#about {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 0.1fr 0.8fr 0.1fr;
+
+    width: 100%;
+    min-height: 600px;
+    height: 90vh;
+    
+    background-color: $color_3;
+
+    #about-content {
+        display: grid;
+        place-items: center;
+        
+        width: 80%;
+        
+        margin-left: auto;
+        margin-right: auto;
+
+        .text {
+            // height: 25%;
+
+            text-align: center;
+            font-size: 1.8rem;
+            color: $color_2;
+
+            .in {
+                font-size: 3rem;
+            }
+
+            &:first-child {
+                font-size: 5rem;
+            }
+
+            &:last-child {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .border {
+        opacity: 0.2;
+
+        background-image: url("../../imgs/pattern.png");
+        background-size: 100%;
+    }
+}
+
+#shop {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 700px;
+    height: 90vh;
+
+    background-image: url("../../imgs/shop.jpg");
+
+    h1 {
+        width: 100%;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 3rem;
+
+        text-align: center;
+        font-size: 3rem;
+        font-family: $font_1;
+        font-weight: 400;
+    }
+
+    & > * > * {
+        // border: 1px solid white;
+        position: relative;
+        z-index: 3;
+    }
+
+    .shop-content {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 2rem;
+
+        width: 90%;
+        height: 90%;
+
+        margin-left: auto;
+        margin-right: auto;
+        
+        .image {
+            position: relative;
+
+            width: 100%;
+            height: 100%;
+    
+            border-radius: 25px;
+
+            .btn {
+                position: relative;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                height: 25%;
+    
+                text-align: center;
+                font-size: 3rem;
+                font-family: $font_1;
+    
+                transition: 0.2s ease-in-out;
+
+                background-size: cover;
+                background-position: center;
+
+                &:nth-child(1) {background-image: url("../../beans bg/1.jpg");}
+                &:nth-child(2) {background-image: url("../../beans bg/2.jpg");}
+                &:nth-child(3) {background-image: url("../../beans bg/3.jpg");}
+                &:nth-child(4) {background-image: url("../../beans bg/4.jpg");}
+
+                & > div {
+                    position: relative;
+                    z-index: 3;
+                }
+
+                .txt {
+                    opacity: 0.3;
+                }
+
+                .onhover {
+                    position: absolute;
+                    font-family: $font_2;
+                    font-weight: 700;
+                    letter-spacing: 0.5rem;
+                    font-size: 4rem;
+                    text-transform: uppercase;
+                    opacity: 0;
+
+                    transition: 0.2s ease-in-out;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .txt {
+                        opacity: 0;
+                    }
+
+                    .onhover {
+                        opacity: 1;
+                    }
+
+                    &::after {
+                        opacity: 0.3;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background-color: $color_2;
+                    opacity: 0.8;
+
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+    
+        .info {
+            position: relative;
+
+            width: 100%;
+            height: 100%;
+
+            p {
+                text-align: justify;
+                margin-bottom: 2rem;
+                text-indent: 2rem;
+            }
+
+            a {
+                color: white;
+            }
+    
+            .info-content {
+                font-size: 1.125rem;
+                font-weight: 300;
+            }
+
+            .source {
+                position: absolute;
+                bottom: 0; right: 0;
+
+                font-size: 0.8rem;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: $color_2;
+            opacity: 0.95;
+        }
+    }
+}
+
+#contact {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 700px;
+    height: 90vh;
 }

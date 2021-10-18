@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
 #click_page {
   position: absolute;
-  z-index: 1;
+  z-index: 11;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -14,6 +14,12 @@
   transition: 0.3s ease-in-out;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  #click_page {
+    display: none;
+  }
 }
 
 #click_page::after {

@@ -1,0 +1,226 @@
+$bp1920: 1920px;
+$bp1536: 1536px;
+$bp1366: 1366px;
+$bp600: 600px;
+$bp400: 400px;
+
+@media screen and (max-width: $bp1366) {
+    #landing_page {
+        .content {
+            width: 75%;
+        }
+    }
+}
+@media screen and (max-width: $bp600) {
+    body {
+        overflow: auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    #fix_nav {
+        .nav-body {
+            position: fixed;
+            top: 90%;
+            // bottom: 1vh;
+            right: calc(50% - calc(280px / 2));
+            z-index: 10;
+    
+            display: flex;
+            flex-direction: row;
+
+            .text {
+                font-size: 1rem;
+            }
+
+            &:before {
+                content: "";
+
+                position: absolute;
+                z-index: -1;
+                
+                width: 100%;
+                height: 100%;
+
+                border-radius: 10px;
+
+                background-color: #060108;
+                opacity: 1;
+                filter: blur(30px);
+            }
+        }
+    
+        .nav-item {
+            margin: 0 0.3rem 0 0.3rem;
+        }
+    }
+
+    #landing_page {
+        .content {
+            width: 100%;
+
+            h1 {font-size: 60px;}
+            h2 {font-size: 46px;}
+
+            .time {
+                div {
+                    font-size: 1.1rem;
+                }
+
+                .main-font {
+                    font-size: 50px;
+                }
+            }
+            
+            .partners {
+                .items {
+                    * {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #djs {
+        .djs-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .dj-item {
+                width: 80vw;
+                height: 60vw;
+
+                margin-bottom: 30vw;
+            }
+
+            .dj-social {
+                * { 
+                    opacity: 0.3;
+                }
+            }
+        }
+
+        .djs-guest {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 0;
+
+            .dj-item {
+                width: 80vw;
+                height: 60vw;
+
+                margin-top: 30vw;
+            }
+
+            .dj-social {
+                * { 
+                    opacity: 0.3;
+                }
+            }
+
+            .guest-text {
+                & > *:nth-child(1) {
+                    
+                }
+                & > *:nth-child(2) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    #dancers {
+        width: 80%;
+
+        .item {
+            flex-direction: column;
+            margin-top: 10vh;
+
+            .dancer-img {
+                position: relative;
+
+                width: 100%;
+                height: 60vw;
+
+                margin-bottom: 4rem;
+            }
+
+            .dancer-text {
+                font-size: 1.2rem;
+            }
+
+            .dancer-info {
+                position: inherit;
+                right: auto;
+                left: auto;
+
+                width: 100%;
+
+                .dancer-footer {
+                    margin-top: 1rem;
+                    font-size: 1rem;
+                }
+            }
+
+            * {
+                text-align: center;
+            }
+        }
+    }
+
+    #places {
+        width: 80%;
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+
+            .item {
+                width: 100%;
+                margin-bottom: 10vh;
+
+                .item-image {
+                    width: 100%;
+                    height: 60vw;
+                }
+
+                .item-text {
+                    font-size: 1.2rem;
+
+                    & > div:nth-child(2) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #tickets-wrapper {
+        margin-top: 15vh;
+
+        #tickets {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .ticket {
+                margin-bottom: 10vh;
+            }
+        }
+    }
+}

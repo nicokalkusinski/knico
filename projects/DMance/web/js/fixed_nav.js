@@ -1,6 +1,6 @@
 let navbar = document.getElementById("fix_nav");
 let navbody = navbar.children[0];
-navbody.style.top = "calc(50% - "+(navbody.offsetHeight/2)+"px)";
+// navbody.style.top = "calc(50% - "+(navbody.offsetHeight/2)+"px)";
 
 let items = navbody.children;
 

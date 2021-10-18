@@ -3,6 +3,12 @@
 $size: 20vw;
 $size2: 32vw;
 
+$bp1920: 1920px;
+$bp1536: 1536px;
+$bp1366: 1366px;
+$bp600: 600px;
+$bp400: 400px;
+
 @mixin image {
     background-image: url("../../imgs/bg/bg_main.jpg");
     background-position: center;
@@ -11,12 +17,14 @@ $size2: 32vw;
 
 #click_page {
     position: absolute;
-    z-index: 1;
-
+    z-index: 11;
     
     display: grid;
     place-items: center;
-    // display: none;
+
+    @media screen and (max-width: $bp600) {
+        display: none;
+    }
 
     width: 100vw;
     height: 100vh;

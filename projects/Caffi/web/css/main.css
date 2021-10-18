@@ -3,12 +3,17 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Jost", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   color: #fff;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .selected {
@@ -17,7 +22,7 @@ body {
 }
 
 .text {
-  text-shadow: 0px 4px 4px #2B2B2B;
+  text-shadow: 0px 4px 4px rgba(43, 43, 43, 0.5);
 }
 
 .font {
@@ -35,6 +40,8 @@ nav {
   width: 100%;
   height: 10vh;
   background-color: #2B2B2B;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 nav #logo {
@@ -66,7 +73,7 @@ nav #menu {
           align-items: center;
   gap: 5rem;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   color: #fff;
 }
 
@@ -75,9 +82,12 @@ nav #menu > * {
   transition: 0.2s ease-in-out;
   cursor: pointer;
   letter-spacing: 1px;
+  opacity: 0.3;
 }
 
 nav #menu > *:hover {
+  opacity: 1;
+  text-shadow: 0px 0px 4px #FFB754;
   color: #FFB754;
 }
 
@@ -158,5 +168,243 @@ nav #menu > *:hover {
   opacity: 0.7;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+#about {
+  position: relative;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.1fr 0.8fr 0.1fr;
+      grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  width: 100%;
+  min-height: 600px;
+  height: 90vh;
+  background-color: #fff;
+}
+
+#about #about-content {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about #about-content .text {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2B2B2B;
+}
+
+#about #about-content .text .in {
+  font-size: 3rem;
+}
+
+#about #about-content .text:first-child {
+  font-size: 5rem;
+}
+
+#about #about-content .text:last-child {
+  font-size: 3rem;
+}
+
+#about .border {
+  opacity: 0.2;
+  background-image: url("../../imgs/pattern.png");
+  background-size: 100%;
+}
+
+#shop {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 700px;
+  height: 90vh;
+  background-image: url("../../imgs/shop.jpg");
+}
+
+#shop h1 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+}
+
+#shop > * > * {
+  position: relative;
+  z-index: 3;
+}
+
+#shop .shop-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  width: 90%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#shop .shop-content .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+#shop .shop-content .image .btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+#shop .shop-content .image .btn:nth-child(1) {
+  background-image: url("../../beans bg/1.jpg");
+}
+
+#shop .shop-content .image .btn:nth-child(2) {
+  background-image: url("../../beans bg/2.jpg");
+}
+
+#shop .shop-content .image .btn:nth-child(3) {
+  background-image: url("../../beans bg/3.jpg");
+}
+
+#shop .shop-content .image .btn:nth-child(4) {
+  background-image: url("../../beans bg/4.jpg");
+}
+
+#shop .shop-content .image .btn > div {
+  position: relative;
+  z-index: 3;
+}
+
+#shop .shop-content .image .btn .txt {
+  opacity: 0.3;
+}
+
+#shop .shop-content .image .btn .onhover {
+  position: absolute;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#shop .shop-content .image .btn:hover {
+  cursor: pointer;
+}
+
+#shop .shop-content .image .btn:hover .txt {
+  opacity: 0;
+}
+
+#shop .shop-content .image .btn:hover .onhover {
+  opacity: 1;
+}
+
+#shop .shop-content .image .btn:hover::after {
+  opacity: 0.3;
+}
+
+#shop .shop-content .image .btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2B2B2B;
+  opacity: 0.8;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#shop .shop-content .info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#shop .shop-content .info p {
+  text-align: justify;
+  margin-bottom: 2rem;
+  text-indent: 2rem;
+}
+
+#shop .shop-content .info a {
+  color: white;
+}
+
+#shop .shop-content .info .info-content {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+#shop .shop-content .info .source {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8rem;
+}
+
+#shop .shop-content::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2B2B2B;
+  opacity: 0.95;
+}
+
+#contact {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 700px;
+  height: 90vh;
 }
 /*# sourceMappingURL=main.css.map */
