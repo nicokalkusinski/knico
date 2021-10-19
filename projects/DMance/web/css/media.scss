@@ -103,6 +103,8 @@ $bp400: 400px;
             }
 
             .dj-social {
+                bottom: 2rem;
+
                 * { 
                     opacity: 0.3;
                 }
@@ -125,15 +127,14 @@ $bp400: 400px;
             }
 
             .dj-social {
+                bottom: 2rem;
+                
                 * { 
                     opacity: 0.3;
                 }
             }
 
             .guest-text {
-                & > *:nth-child(1) {
-                    
-                }
                 & > *:nth-child(2) {
                     font-size: 1.2rem;
                 }
@@ -159,6 +160,14 @@ $bp400: 400px;
 
             .dancer-text {
                 font-size: 1.2rem;
+            }
+
+            .dancer-social {
+                bottom: 2rem;
+
+                & > * {
+                    opacity: 0.3;
+                }
             }
 
             .dancer-info {

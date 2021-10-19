@@ -83,6 +83,9 @@
     height: 60vw;
     margin-bottom: 30vw;
   }
+  #djs .djs-items .dj-social {
+    bottom: 2rem;
+  }
   #djs .djs-items .dj-social * {
     opacity: 0.3;
   }
@@ -106,6 +109,9 @@
     width: 80vw;
     height: 60vw;
     margin-top: 30vw;
+  }
+  #djs .djs-guest .dj-social {
+    bottom: 2rem;
   }
   #djs .djs-guest .dj-social * {
     opacity: 0.3;
@@ -131,6 +137,12 @@
   }
   #dancers .item .dancer-text {
     font-size: 1.2rem;
+  }
+  #dancers .item .dancer-social {
+    bottom: 2rem;
+  }
+  #dancers .item .dancer-social > * {
+    opacity: 0.3;
   }
   #dancers .item .dancer-info {
     position: inherit;
