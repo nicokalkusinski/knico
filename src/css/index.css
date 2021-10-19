@@ -267,8 +267,8 @@ header #header-content .btn {
   display: -ms-grid;
   display: grid;
   gap: 1%;
-  -ms-grid-columns: (calc((100% - 3%) / 4))[4];
-      grid-template-columns: repeat(4, calc((100% - 3%) / 4));
+  -ms-grid-columns: (calc((100% - 3%) / 5))[5];
+      grid-template-columns: repeat(5, calc((100% - 3%) / 5));
 }
 
 #about nav #links .nav-item {
