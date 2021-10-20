@@ -1,0 +1,65 @@
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+@media screen and (max-width: $xl) {
+    #wrapper {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    #wrapper {
+        #contact {
+            button {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    #wrapper {
+        width: 80%;
+
+        #contact {
+            button {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+
+    h1 {
+        font-size: 4rem !important;
+    }
+
+    h2 {
+        font-size: 1.4rem !important; 
+    }
+
+    #wrapper {
+        width: 100%;
+
+        .image {
+            width: 100%;
+        }
+
+        .info {
+            display: none;
+        }
+
+        #contact {
+            input {
+                width: 80%;
+            }
+
+            button {
+                width: 60%;
+            }
+        }
+    }
+}

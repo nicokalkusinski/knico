@@ -1,0 +1,45 @@
+@media screen and (max-width: 1280px) {
+  #wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #wrapper #contact button {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #wrapper {
+    width: 80%;
+  }
+  #wrapper #contact button {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 4rem !important;
+  }
+  h2 {
+    font-size: 1.4rem !important;
+  }
+  #wrapper {
+    width: 100%;
+  }
+  #wrapper .image {
+    width: 100%;
+  }
+  #wrapper .info {
+    display: none;
+  }
+  #wrapper #contact input {
+    width: 80%;
+  }
+  #wrapper #contact button {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=media.css.map */
