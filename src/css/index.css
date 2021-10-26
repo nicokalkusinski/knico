@@ -266,7 +266,6 @@ header #header-content .btn {
   height: 100%;
   display: -ms-grid;
   display: grid;
-  gap: 1%;
   -ms-grid-columns: (calc((100% - 3%) / 5))[5];
       grid-template-columns: repeat(5, calc((100% - 3%) / 5));
 }
