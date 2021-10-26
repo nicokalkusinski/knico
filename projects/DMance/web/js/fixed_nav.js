@@ -1,3 +1,6 @@
+//scrolls to top when page is loaded
+window.onbeforeunload = function () {window.scrollTo(0, 0);}
+
 let navbar = document.getElementById("fix_nav");
 let navbody = navbar.children[0];
 // navbody.style.top = "calc(50% - "+(navbody.offsetHeight/2)+"px)";
@@ -12,13 +15,13 @@ let heights = [];
 for(let i = 2; i < 8; i++) {
     heights[i-2] = sections[i].getBoundingClientRect().top;
 }
-console.log(heights);
+// console.log(heights);
 
 document.addEventListener("scroll", () => {
     let currentScroll = document.documentElement.scrollTop;
     let vh = window.innerHeight;
 
-    console.log(currentScroll);
+    // console.log(currentScroll);
     for(let i = 0; i < items.length; i++) {
         items[i].classList.remove("selected");
         items[i].classList.add("unselected");
