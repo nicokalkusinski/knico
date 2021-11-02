@@ -662,34 +662,34 @@ header {
                 user-select: text;
 
                 .info-line {
+                    
                     margin: 5%;
 
                     &:last-child {
                         display: flex;
+                        // justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
                     }
 
                     .icon {
-                        line-height: 31px;
                         text-align: center;
 
                         font-family: $f-head;
-                        font-size: 1.3em;
-                        margin-right: 5%;
+                        font-size: 1.4em;
 
                         transition: $transition_basic;
 
                         user-select: none;
 
-                        &:nth-child(2) {
-                            font-size: 1.6em;
-                        }
-
                         &:hover {
                             cursor: pointer;
 
-                            &:nth-child(1) {color: #a304fa;}
-                            &:nth-child(2) {color: #1dbf73;}
-                            &:nth-child(3) {color: #FF0000;}
+                            &:nth-child(1) {color: #0e76a8;}
+                            &:nth-child(2) {color: #a304fa;}
+                            &:nth-child(3) {color: #1dbf73;}
+                            &:nth-child(4) {color: #FF0000;}
+                            &:nth-child(5) {color: #000};
                         }
                     }
                 }

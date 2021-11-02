@@ -781,14 +781,16 @@ header #header-content .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
 }
 
 #contact #contact-content #form .info .info-line .icon {
-  line-height: 31px;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  font-size: 1.3em;
-  margin-right: 5%;
+  font-size: 1.4em;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   -webkit-user-select: none;
@@ -797,23 +799,27 @@ header #header-content .btn {
           user-select: none;
 }
 
-#contact #contact-content #form .info .info-line .icon:nth-child(2) {
-  font-size: 1.6em;
-}
-
 #contact #contact-content #form .info .info-line .icon:hover {
   cursor: pointer;
 }
 
 #contact #contact-content #form .info .info-line .icon:hover:nth-child(1) {
-  color: #a304fa;
+  color: #0e76a8;
 }
 
 #contact #contact-content #form .info .info-line .icon:hover:nth-child(2) {
-  color: #1dbf73;
+  color: #a304fa;
 }
 
 #contact #contact-content #form .info .info-line .icon:hover:nth-child(3) {
+  color: #1dbf73;
+}
+
+#contact #contact-content #form .info .info-line .icon:hover:nth-child(4) {
   color: #FF0000;
+}
+
+#contact #contact-content #form .info .info-line .icon:hover:nth-child(5) {
+  color: #000;
 }
 /*# sourceMappingURL=index.css.map */
