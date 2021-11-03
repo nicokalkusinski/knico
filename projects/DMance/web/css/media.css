@@ -18,7 +18,7 @@
     position: fixed;
     top: 90%;
     right: calc(50% - calc(280px / 2));
-    z-index: 10;
+    z-index: 20;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
